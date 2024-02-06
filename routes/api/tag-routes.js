@@ -10,6 +10,7 @@ const { Tag, Product, ProductTag } = require('../../models');
       {include:
         [{
             model: Product,
+            through: ProductTag
           },
         ]}
     )
@@ -28,6 +29,7 @@ const { Tag, Product, ProductTag } = require('../../models');
       {include:
         [{
           model: Product,
+          through: ProductTag
         }]
     })
     .then((data) => {
